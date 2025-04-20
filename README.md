@@ -29,3 +29,6 @@ Goals:
 6. (row)win/lose conditions
 
 -- Finalbericht
+
+References:
+https://forum.digikey.com/t/vga-controller-vhdl/12794
