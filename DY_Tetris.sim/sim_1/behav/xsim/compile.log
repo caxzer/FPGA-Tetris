@@ -1,4 +1,4 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jason/FPGA-Tetris/DY_Tetris.srcs/sources_1/new/VGA_Test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/cax/DY_Tetris/DY_Tetris.srcs/sources_1/new/VGA_Test.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'VGA_Test'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jason/FPGA-Tetris/DY_Tetris.srcs/sources_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/cax/DY_Tetris/DY_Tetris.srcs/sources_1/new/Testbench.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'Testbench'

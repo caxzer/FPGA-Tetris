@@ -14,7 +14,7 @@ entity VGA_Test is
 end VGA_Test;
 
 architecture Behavioral of VGA_Test is
-
+    -- data sheet: 640x480 Display
     constant H_VISIBLE  : integer := 640;
     constant H_FRONT    : integer := 16;
     constant H_SYNC     : integer := 96;
@@ -24,7 +24,7 @@ architecture Behavioral of VGA_Test is
     constant V_VISIBLE  : integer := 480;
     constant V_FRONT    : integer := 10;
     constant V_SYNC     : integer := 2;
-    constant V_BACK     : integer := 33;
+    constant V_BACK     : integer := 29;
     constant V_TOTAL    : integer := V_VISIBLE + V_FRONT + V_SYNC + V_BACK;
 
     signal h_count : integer range 0 to H_TOTAL - 1 := 0;
