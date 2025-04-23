@@ -33,6 +33,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Video_Renderer is
 --  Port ( );
+
+
 end Video_Renderer;
 
 architecture Behavioral of Video_Renderer is

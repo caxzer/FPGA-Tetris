@@ -35,28 +35,29 @@ entity VGA_Controller is
 --  Port ( );
     generic (
         -- data sheet: 800x600 Display @ 60 Hz
-        h_visible  : integer := 800;
-        h_fp    : integer := 40;
+        -- still variable!!!
+        h_visible   : integer := 800;
+        h_fp        : integer := 40;
         h_pulse     : integer := 128;
-        h_bp     : integer := 88;
-        hsync_pol  : std_logic :='1';
-        v_visible  : integer := 600;
-        v_fp    : integer := 1;
+        h_bp        : integer := 88;
+        hsync_pol   : bit :='1'; -- sync polarity
+        v_visible   : integer := 600;
+        v_fp        : integer := 1;
         v_pulse     : integer := 4;
-        v_bp     : integer := 23;
-        vsync_pol  : std_logic := '1'
+        v_bp        : integer := 23;
+        vsync_pol   : bit := '1' -- sync polarity
     );
     Port (
-        pixel_clk : in  STD_LOGIC;  -- 40 MHz clock
-        reset_n: in std_logic;      -- manual reset, logic in top
-        hsync   : out STD_LOGIC;
-        vsync   : out STD_LOGIC;
-        --red : out STD_LOGIC_VECTOR(3 downto 0);
-        --green   : out STD_LOGIC_VECTOR(3 downto 0);
-        --blue    : out STD_LOGIC_VECTOR(3 downto 0);
-        pixel_x: out integer; --horizontal ixel coordinate
-        pixel_y: out integer; --vertical pixel coordinate
-        disp_ena : out STD_LOGIC
+        pixel_clk   : in  std_logic;  -- 40 MHz clock (not bit because of rising edge)
+        reset_n     : in bit;      -- manual reset, logic in top
+        hsync       : out bit;
+        vsync       : out bit;
+        --red       : out STD_LOGIC_VECTOR(3 downto 0);
+        --green     : out STD_LOGIC_VECTOR(3 downto 0);
+        --blue      : out STD_LOGIC_VECTOR(3 downto 0);
+        pixel_x     : out integer; --horizontal ixel coordinate
+        pixel_y     : out integer; --vertical pixel coordinate
+        disp_ena    : out bit
         );
 end VGA_Controller;
 
@@ -95,13 +96,13 @@ begin
             end if;
             
             --generating synchronization signal pulses (refer to BASYS3 timing diagram)
-            if(h_count > h_visible + h_fp and h_count <= h_visible + h_fp + h_pulse) then
+            if(h_count >= h_visible + h_fp and h_count < h_visible + h_fp + h_pulse) then
                 hsync <= hsync_pol;
             else
                 hsync <= not hsync_pol;
             end if;
             
-            if(v_count > v_visible + v_fp and v_count <= v_visible + v_fp + v_pulse) then
+            if(v_count >= v_visible + v_fp and v_count < v_visible + v_fp + v_pulse) then
                 vsync <= vsync_pol;
             else
                 vsync <= not vsync_pol;
