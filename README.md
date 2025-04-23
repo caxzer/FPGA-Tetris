@@ -13,7 +13,9 @@ ASK FITZ:
 
 FSM Diagram?
 VGA output - 20x20 (size of 1 block)
-	100x200 (size of field)
+100x200 (size of field)
+Block color: white
+remove 1 pixel on the side of every block
 
 Goals:
 1. represent block
