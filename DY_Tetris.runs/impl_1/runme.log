@@ -1,0 +1,317 @@
+
+*** Running vivado
+    with args -log Tetris_Top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Tetris_Top.tcl -notrace
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Tue Apr 22 10:47:35 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source Tetris_Top.tcl -notrace
+Command: link_design -top Tetris_Top -part xc7a35tcpg236-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1465.375 ; gain = 0.000 ; free physical = 4314 ; free virtual = 12715
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc]
+WARNING: [Vivado 12-584] No ports matched 'vgaRed[0]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:221]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:221]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched '(vgaRed[0]}'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:222]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:222]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaRed[1]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:223]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:223]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaRed[1]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:224]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:224]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaRed[2]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:225]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:225]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaRed[2]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:226]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:226]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaRed[3]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:227]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:227]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaRed[3]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:228]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:228]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaBlue[0]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:229]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:229]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaBlue[0]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:230]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:230]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaBlue[1]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:231]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:231]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaBlue[1]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:232]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:232]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaBlue[2]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:233]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:233]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaBlue[2]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:234]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:234]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched '(vgaBlue[3]}'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:235]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:235]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaBlue[3]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:236]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:236]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaGreen[0]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:237]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:237]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched '(vgaGreen[0]}'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:238]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:238]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched '(vgaGreen[1]}'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:239]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:239]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaGreen[1]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:240]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:240]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaGreen[2]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:241]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:241]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaGreen[2]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:242]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:242]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaGreen'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:243]
+WARNING: [Vivado 12-584] No ports matched '[3]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:243]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:243]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vgaGreen[3]'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:244]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:244]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Hsync'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:245]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:245]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Hsync'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:246]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:246]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Vsync'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:247]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:247]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'Vsync'. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:248]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc:248]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/cax/DY_Tetris/DY_Tetris.srcs/constrs_1/new/Tetris.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1628.906 ; gain = 0.000 ; free physical = 4306 ; free virtual = 12658
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+5 Infos, 29 Warnings, 28 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00.58 ; elapsed = 00:00:00.61 . Memory (MB): peak = 1634.844 ; gain = 5.938 ; free physical = 4298 ; free virtual = 12650
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2062.703 ; gain = 427.859 ; free physical = 3871 ; free virtual = 12239
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2403.656 ; gain = 0.000 ; free physical = 3540 ; free virtual = 11908
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2403.656 ; gain = 0.000 ; free physical = 3540 ; free virtual = 11908
+Phase 1 Initialization | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2403.656 ; gain = 0.000 ; free physical = 3540 ; free virtual = 11908
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2403.656 ; gain = 0.000 ; free physical = 3540 ; free virtual = 11908
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2403.656 ; gain = 0.000 ; free physical = 3540 ; free virtual = 11908
+Phase 2 Timer Update And Timing Data Collection | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2403.656 ; gain = 0.000 ; free physical = 3540 ; free virtual = 11908
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2403.656 ; gain = 0.000 ; free physical = 3540 ; free virtual = 11908
+Retarget | Checksum: 127f242c9
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2403.656 ; gain = 0.000 ; free physical = 3540 ; free virtual = 11908
+Constant propagation | Checksum: 127f242c9
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2403.656 ; gain = 0.000 ; free physical = 3540 ; free virtual = 11908
+Phase 5 Sweep | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2403.656 ; gain = 0.000 ; free physical = 3540 ; free virtual = 11908
+Sweep | Checksum: 127f242c9
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2435.672 ; gain = 32.016 ; free physical = 3540 ; free virtual = 11908
+BUFG optimization | Checksum: 127f242c9
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2435.672 ; gain = 32.016 ; free physical = 3540 ; free virtual = 11908
+Shift Register Optimization | Checksum: 127f242c9
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2435.672 ; gain = 32.016 ; free physical = 3540 ; free virtual = 11908
+Post Processing Netlist | Checksum: 127f242c9
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2435.672 ; gain = 32.016 ; free physical = 3540 ; free virtual = 11908
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2435.672 ; gain = 0.000 ; free physical = 3540 ; free virtual = 11908
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2435.672 ; gain = 32.016 ; free physical = 3540 ; free virtual = 11908
+Phase 9 Finalization | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2435.672 ; gain = 32.016 ; free physical = 3540 ; free virtual = 11908
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2435.672 ; gain = 32.016 ; free physical = 3540 ; free virtual = 11908
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2435.672 ; gain = 0.000 ; free physical = 3540 ; free virtual = 11908
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2435.672 ; gain = 0.000 ; free physical = 3540 ; free virtual = 11908
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2435.672 ; gain = 0.000 ; free physical = 3540 ; free virtual = 11908
+Ending Netlist Obfuscation Task | Checksum: 127f242c9
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2435.672 ; gain = 0.000 ; free physical = 3540 ; free virtual = 11908
+INFO: [Common 17-83] Releasing license: Implementation
+25 Infos, 29 Warnings, 28 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2435.672 ; gain = 806.766 ; free physical = 3540 ; free virtual = 11908
+INFO: [Vivado 12-24828] Executing command : report_drc -file Tetris_Top_drc_opted.rpt -pb Tetris_Top_drc_opted.pb -rpx Tetris_Top_drc_opted.rpx
+Command: report_drc -file Tetris_Top_drc_opted.rpt -pb Tetris_Top_drc_opted.pb -rpx Tetris_Top_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/cax/DY_Tetris/DY_Tetris.runs/impl_1/Tetris_Top_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint '/home/cax/DY_Tetris/DY_Tetris.runs/impl_1/Tetris_Top_opt.dcp' has been generated.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2484.465 ; gain = 0.000 ; free physical = 3519 ; free virtual = 11888
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: f0c6a185
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2484.465 ; gain = 0.000 ; free physical = 3519 ; free virtual = 11888
+Phase 1 Placer Initialization | Checksum: f0c6a185
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2484.465 ; gain = 0.000 ; free physical = 3518 ; free virtual = 11888
+ERROR: [Place 30-494] The design is empty
+Resolution: Check if opt_design has removed all the leaf cells of your design.  Check whether you have instantiated and connected all of the top level ports.
+Ending Placer Task | Checksum: f0c6a185
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2484.465 ; gain = 0.000 ; free physical = 3517 ; free virtual = 11888
+42 Infos, 29 Warnings, 28 Critical Warnings and 2 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 22 10:47:59 2025...

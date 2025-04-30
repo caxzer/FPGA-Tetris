@@ -40,24 +40,21 @@ entity VGA_Controller is
         h_fp        : integer := 40;
         h_pulse     : integer := 128;
         h_bp        : integer := 88;
-        hsync_pol   : bit :='1'; -- sync polarity
+        hsync_pol   : std_logic :='1'; -- sync polarity
         v_visible   : integer := 600;
         v_fp        : integer := 1;
         v_pulse     : integer := 4;
         v_bp        : integer := 23;
-        vsync_pol   : bit := '1' -- sync polarity
+        vsync_pol   : std_logic := '1' -- sync polarity
     );
     Port (
         pixel_clk   : in  std_logic;  -- 40 MHz clock (not bit because of rising edge)
-        reset_n     : in bit;      -- manual reset, logic in top
-        hsync       : out bit;
-        vsync       : out bit;
-        --red       : out STD_LOGIC_VECTOR(3 downto 0);
-        --green     : out STD_LOGIC_VECTOR(3 downto 0);
-        --blue      : out STD_LOGIC_VECTOR(3 downto 0);
-        pixel_x     : out integer; --horizontal ixel coordinate
-        pixel_y     : out integer; --vertical pixel coordinate
-        disp_ena    : out bit
+        reset_n     : in std_logic;      -- manual reset, logic in top
+        hsync       : out std_logic;
+        vsync       : out std_logic;
+        pixel_x     : out integer;      --horizontal ixel coordinate
+        pixel_y     : out integer;      --vertical pixel coordinate
+        disp_ena    : out std_logic
         );
 end VGA_Controller;
 
@@ -88,7 +85,7 @@ begin
             else
                 h_count := 0;
                 -- add a vertical count once one horizontal row is done
-                if(v_count < v_count-1) then
+                if(v_count < v_total-1) then
                     v_count := v_count +1;
                 else
                     v_count :=0;
@@ -111,12 +108,16 @@ begin
             -- pixel position
             if(h_count < h_visible) then
                 pixel_x <= h_count;
+            else 
+                pixel_x <= 0;
             end if;
             if(v_count < v_visible)then
                 pixel_y <= v_count;
+            else
+                pixel_y <= 0;
             end if;
             
-            -- display out enable if not blank
+            --  Only process pixel_x and pixel_y if in the visible area
             if(h_count < h_visible and v_count < v_visible) then
                 disp_ena <= '1';
             else 

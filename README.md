@@ -29,3 +29,10 @@ Goals:
 6. (row)win/lose conditions
 
 -- Finalbericht
+
+References : 
+https://forum.digikey.com/t/vga-controller-vhdl/12794
+https://github.com/sajadh76/VGA/blob/master/VGA%20(2).vhd
+https://tomverbeure.github.io/video_timings_calculator
+https://www.instructables.com/Video-Interfacing-With-FPGA-Using-VGA/
+
