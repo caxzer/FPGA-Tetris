@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Tue Apr 22 13:31:03 2025
-# Process ID         : 52692
+# Start of session at: Sat May  3 10:53:54 2025
+# Process ID         : 128778
 # Current directory  : /home/cax/DY_Tetris/DY_Tetris.runs/clk_wiz_0_synth_1
 # Command line       : vivado -log clk_wiz_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_0.tcl
 # Log file           : /home/cax/DY_Tetris/DY_Tetris.runs/clk_wiz_0_synth_1/clk_wiz_0.vds
@@ -13,12 +13,12 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.2 LTS
 # Processor Detail   : AMD Ryzen 5 PRO 3500U w/ Radeon Vega Mobile Gfx
-# CPU Frequency      : 2872.498 MHz
+# CPU Frequency      : 1767.240 MHz
 # CPU Physical cores : 4
 # CPU Logical cores  : 8
 # Host memory        : 14534 MB
 # Swap memory        : 4294 MB
 # Total Virtual      : 18829 MB
-# Available Virtual  : 11774 MB
+# Available Virtual  : 9397 MB
 #-----------------------------------------------------------
 source clk_wiz_0.tcl -notrace

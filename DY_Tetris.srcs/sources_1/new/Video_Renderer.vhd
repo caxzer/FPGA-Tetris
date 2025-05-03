@@ -21,11 +21,9 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use work.gamegrid_pkg.all;
-
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -37,13 +35,9 @@ entity Video_Renderer is
 Port (
     clk         : in std_logic;
     reset       : in std_logic;
-    
-    -- game field
-    field : in field_grid;
-    
-    -- screen pixel coordinates
-    pixel_x     : in integer;
-    pixel_y     : in integer;
+    field : in std_logic_vector(200 downto 1);  -- game field
+    pixel_x     : in std_logic_vector(9 downto 0);  -- screen pixel coordinates
+    pixel_y     : in std_logic_vector(8 downto 0);  -- -
     disp_ena    : in std_logic;
     
     -- output for color
@@ -57,24 +51,24 @@ end Video_Renderer;
 
 architecture Behavioral of Video_Renderer is
 --playing field declaration
-constant SCREEN_WIDTH   : integer :=  600;
-constant SCREEN_HEIGHT  : integer :=  800;
-constant GAME_WIDTH     : integer :=  220;
-constant GAME_HEIGHT    : integer :=  440;
-constant game_origin_x  : integer :=  (SCREEN_WIDTH  - GAME_WIDTH) / 2;
-constant game_origin_y  : integer :=  (SCREEN_HEIGHT - GAME_HEIGHT)/ 2;
-constant cell_size      : integer :=  20;
+constant SCREEN_WIDTH   : integer := 640;
+constant SCREEN_HEIGHT  : integer := 480;
+constant GAME_WIDTH     : integer := 240;  -- 10 columns × 20 px + 40px including border
+constant GAME_HEIGHT    : integer := 440;  -- 20 rows × 20 px + 40px including border
+constant game_origin_x  : integer := (SCREEN_WIDTH  - GAME_WIDTH) / 2;
+constant game_origin_y  : integer := (SCREEN_HEIGHT - GAME_HEIGHT) / 2;
+constant cell_size      : integer := 20;
+
+
 
 -- 2D Array declaration 
 -- ACHTUNG : "GRID" ENTSPRICHT NICHT "FIELD"
 -- "GRID" ENTHÄLT AUCH GRENZE BLÖCKE
--- "FIELDx"1-10
--- "FIELDy"1-20
-signal grid_x : integer range 0 to 11;
-signal grid_y : integer range 0 to 21;
--- grid_x and grid_y at 0 is just black 
-signal inside_game_area : bit := '0';
---signal is_border : bit;
+-- "FIELDx/y"1-10
+signal grid_x : integer range 0 to 11 := 0;
+signal grid_y : integer range 0 to 21 := 0;
+-- grid_x and grid_y at 0 is grey 
+signal inside_game_area: bit:= '0' ;
 
 begin
     -- finding grid location
@@ -82,59 +76,62 @@ begin
     process(pixel_x,pixel_y,disp_ena)
     begin
     if disp_ena = '1' then
-        if (pixel_x >= game_origin_x and pixel_x < game_origin_x + GAME_WIDTH) and (pixel_y >= game_origin_y and pixel_y < game_origin_y + GAME_HEIGHT) then
+        if (to_integer(unsigned(pixel_x)) >= game_origin_x and to_integer(unsigned(pixel_x)) < game_origin_x + GAME_WIDTH) and 
+        (to_integer(unsigned(pixel_y)) >= game_origin_y and to_integer(unsigned(pixel_y)) < game_origin_y + GAME_HEIGHT) then
             inside_game_area <= '1';
-            grid_x <= (pixel_x - game_origin_x) / cell_size;
-            grid_y <= (pixel_y - game_origin_y) / cell_size;
+            grid_x <= (to_integer(unsigned(pixel_x)) - game_origin_x) / cell_size;
+            grid_y <= (to_integer(unsigned(pixel_y)) - game_origin_y) / cell_size;
         else
             inside_game_area <= '0';
-            grid_x <= 0;
-            grid_y <= 0;
         end if;
     end if;
     end process;
     
     -- taking grid location and painting field
-    process(grid_x, grid_y,pixel_x, pixel_y,reset)
-    variable pxcell_x : integer:= 1 ;
-    variable pxcell_y : integer:= 1 ;
-    variable is_border : boolean ;
+    process(pixel_x, pixel_y, grid_x, grid_y, disp_ena, inside_game_area) --reset)
+    
+        -- pxcell and pixel_x/y are starting from 0
+        -- grid and field starts from 1
+        variable pxcell_x : integer;
+        variable pxcell_y : integer;
+        variable is_border : boolean;
+        variable field_idx : integer;
     begin
-        -- paint edges grey, constantly showing
-        if grid_y = 0 or grid_y = 21 or grid_x = 0 or grid_x = 11 then
-            red <= "1000";
+    
+        if disp_ena = '0' or inside_game_area = '0' then
+            red <= "0000";
+            green <= "0000";
+            blue <= "0000";
+
+        elsif grid_x = 0 or grid_x = 11 or grid_y = 0 or grid_y = 21 then
+            red <= "1000";  -- light grey border
             green <= "1000";
             blue <= "1000";
-        end if;
-        if reset = '0' then
-            -- paint everything else
-            if field(grid_x)(grid_y) = '1' and disp_ena = '1' then
-                -- pixel position inside the cell
-                pxcell_x := (pixel_x - game_origin_x - cell_size) mod cell_size;
-                pxcell_y := (pixel_y - game_origin_y - cell_size) mod cell_size;
-                
-                -- borer pixel check
-                is_border := ((pxcell_x = 1) or (pxcell_y = 1) or (pxcell_x = cell_size ) or (pxcell_y = cell_size ));
-                    
-                if not is_border  then
-                    red <= "1111";
-                    green <= "1111";
-                    blue <= "1111";
-                else 
+        
+        else
+            -- grid cell content
+            field_idx := (grid_y - 1) * 10 + grid_x;
+            if field_idx >= 1 and field_idx <= 200 and field(field_idx) = '1' then
+                pxcell_x := (to_integer(unsigned(pixel_x)) - game_origin_x) mod cell_size;
+                pxcell_y := (to_integer(unsigned(pixel_y)) - game_origin_y) mod cell_size;
+
+                is_border := (pxcell_x = 0) or (pxcell_y = 0) or (pxcell_x = cell_size - 1) or (pxcell_y = cell_size - 1);
+
+                if is_border then
                     red <= "0000";
                     green <= "0000";
                     blue <= "0000";
+                else
+                    red <= "1111";
+                    green <= "1111";
+                    blue <= "1111";
                 end if;
-            else 
+            else
                 red <= "0000";
                 green <= "0000";
                 blue <= "0000";
             end if;
-        else -- reset condition
-            red <= "0000";
-            green <= "0000";
-            blue <= "0000";
         end if;
     end process;
-    
+     
 end Behavioral;

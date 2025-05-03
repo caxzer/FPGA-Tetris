@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-// Date        : Tue Apr 22 13:31:46 2025
+// Date        : Sat May  3 10:54:38 2025
 // Host        : cax-ThinkPad-T495s running 64-bit Ubuntu 24.04.2 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/cax/DY_Tetris/DY_Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v

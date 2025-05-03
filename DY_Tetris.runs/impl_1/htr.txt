@@ -7,4 +7,4 @@
 # Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 #
 
-vivado -log Tetris_Top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Tetris_Top.tcl -notrace
+vivado -log VGA_Top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source VGA_Top.tcl -notrace

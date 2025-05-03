@@ -1,36 +1,82 @@
-'FPGA-Tetris
+FPGA-Tetris
 
-Tetris
+Controls: 
+- left_button : move left
+- right_button : move right
+- center_button : rotate
+- up_button : start
+- down_button : soft-drop
 
-ASK FITZ: 
-- Board, we need 2 Basys3
-
-
-3 Keys:
-- Rotate
-- Left
-- Right
-
-FSM Diagram?
-VGA output - 20x20 (size of 1 block)
-100x200 (size of field)
+Features:
+standard resolution : 640x480@60hz 25.175Mhz (25.17301Mhz instead because of PLL limitations!)
+size of one block : 20x20 pixels
+size of field : 100x200 pixels 
 Block color: white
 remove 1 pixel on the side of every block
+centered field
+block falls every 2 seconds
+on clear: flash the line 3 times and clears it, then move the entire grid down by 1 cell
 
-Goals:
-1. represent block
-2. blocks drop
-3. blocks move left-right
+Terminology:
+Tetrimino: tetris blocks
+Block: one grid block of a Tetrimino cell 
+Grid: game area with border (count starts from 0)
+Field : game area excluding border (count from 1 onwards)
+pixel: actual pixels of the resolution (count starts from 0)
 
+
+Blocks (spawn position with respect with axis: x=5, y=2) and rotational axis (anti-clockwise):
+line-piece: 
+ooxo
+
+L-piece:
+  o
+oxo
+
+reverse L-piece:
+o
+oxo
+
+T-piece:
+ o
+oxo
+
+Z-piece:
+oo
+ xo
+
+S-piece:
+ oo
+ox
+
+square piece (no rotation!):
+ox
+oo
+
+Module description:
+VGA_Controller : generates vital H- and V-Sync for output, alongside pixel coordinates and display_enable signal 
+Video_Renderer : takes grid and vga outputs for actual color generation and display on screen 
+Game_Engine : !!NEEDS EXPANSION!! takes care of Tetermino generation, movement & rotation with collision, Line clearing, score
+Field_RAM : supply game engine with current grid position updates grid on every tick with falling blocks , AND instant movement updates if control detected!
+PRNG : generates a random number between 1 and 7 for the Tetriminos
+Input_Controller : takes input and makes a bit vector for clean input signal
+Scoreboard : 7-Segment-Display controller
+Moduloticker : generates tick every 100ms (for control movements)(use 20 ticks for each fall)
+
+
+Goals and timeline:
+1. draw FSM and Block Diagramm
+2. make display work
+3. draw blocks
+4. blocks fall with each tick
 --- Zwischenbericht
+5. blocks move horizontally
+6. blocks rotate
+7. blocks stack
+8. (row)win/lose conditions
+--- Finalbericht
 
-4. blocks rotate
-5. blocks stack
-6. (row)win/lose conditions
-
--- Finalbericht
-
-References : 
+References (add here!): 
 https://forum.digikey.com/t/vga-controller-vhdl/12794
 https://github.com/sajadh76/VGA/blob/master/VGA%20(2).vhd
 https://tomverbeure.github.io/video_timings_calculator

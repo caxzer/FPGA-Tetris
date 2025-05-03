@@ -22,7 +22,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-use work.gamegrid_pkg.all;
 
 entity Tetris_Top is
 --  Port ( );
@@ -47,7 +46,8 @@ architecture Behavioral of Tetris_Top is
     signal clk_gametick : std_logic;
     
     -- Signals for VGA 
-    signal pixel_x,pixel_y: integer range 0 to 800;
+    signal pixel_x: std_logic_vector(9 downto 0);
+    signal pixel_y: std_logic_vector(8 downto 0);
     signal disp_ena: std_logic;
     signal red, green, blue: std_logic_vector(3 downto 0);
     signal h_sync,v_sync: std_logic;
@@ -56,7 +56,7 @@ architecture Behavioral of Tetris_Top is
     signal move_left, move_right, pull_drop: std_logic ;
     signal next_step : bit_vector (3 downto 0);
     
-    signal field: field_grid;
+    signal field: std_logic_vector(200 downto 1);  -- game field
     signal tetrimino_piece : bit_vector(2 downto 0);
     
     -- Component declarations
@@ -127,6 +127,13 @@ begin
             tetrimino_piece => tetrimino_piece
         );
         
+    PRNG : entity work.PRNG
+        port map(
+        clk => clk,
+        reset => reset,
+        tetrimino_piece => tetrimino_piece
+        );
+           
     -- Assignment to VGA Port
     Hsync   <= h_sync;
     Vsync   <= v_sync;

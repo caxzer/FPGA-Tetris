@@ -21,10 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -34,26 +31,26 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity VGA_Controller is
 --  Port ( );
     generic (
-        -- data sheet: 800x600 Display @ 60 Hz
-        -- still variable!!!
-        h_visible   : integer := 800;
-        h_fp        : integer := 40;
-        h_pulse     : integer := 128;
-        h_bp        : integer := 88;
-        hsync_pol   : std_logic :='1'; -- sync polarity
-        v_visible   : integer := 600;
-        v_fp        : integer := 1;
-        v_pulse     : integer := 4;
-        v_bp        : integer := 23;
-        vsync_pol   : std_logic := '1' -- sync polarity
+        -- VGA 640x480 @60Hz timing
+        h_visible   : integer := 640;   -- visible pixels
+        h_fp        : integer := 16;    -- front porch
+        h_pulse     : integer := 96;    -- sync pulse
+        h_bp        : integer := 48;    -- back porch
+        hsync_pol   : std_logic := '0'; -- negative polarity
+    
+        v_visible   : integer := 480;   -- visible lines
+        v_fp        : integer := 10;    -- front porch
+        v_pulse     : integer := 2;     -- sync pulse
+        v_bp        : integer := 33;    -- back porch
+        vsync_pol   : std_logic := '0'  -- negative polarity
     );
     Port (
         pixel_clk   : in  std_logic;  -- 40 MHz clock (not bit because of rising edge)
         reset_n     : in std_logic;      -- manual reset, logic in top
         hsync       : out std_logic;
         vsync       : out std_logic;
-        pixel_x     : out integer;      --horizontal ixel coordinate
-        pixel_y     : out integer;      --vertical pixel coordinate
+        pixel_x     : out std_logic_vector (9 downto 0);      --horizontal pixel coordinates (1024 but only 640 needed)
+        pixel_y     : out std_logic_vector (8 downto 0);      --vertical pixel coordinate (512 but only 480 needed)
         disp_ena    : out std_logic
         );
 end VGA_Controller;
@@ -63,32 +60,33 @@ architecture Behavioral of VGA_Controller is
     constant h_total    : integer := h_visible + h_fp + h_pulse + h_bp; --total no. of pixel clocks in row
     constant v_total    : integer := v_visible + v_fp + v_pulse + v_bp; -- total no. of rows in column
     
+    signal h_count : integer range 0 to h_total - 1 := 0;
+    signal v_count : integer range 0 to v_total - 1 := 0;
 
     
 begin
     process(pixel_clk, reset_n)
-    variable h_count : integer range 0 to h_total - 1 := 0;
-    variable v_count : integer range 0 to v_total - 1 := 0;
+    
     begin
         if(reset_n = '0') then  
-            h_count:= 0;
-            v_count:= 0;
+            h_count <= 0;
+            v_count <= 0;
             hsync <= not Hsync_pol;
             vsync <= not Vsync_pol;
             disp_ena <= '0';
-            pixel_x <= 0;
-            pixel_y <= 0;
+            pixel_x <= (others =>'0');
+            pixel_y <= (others =>'0');
         elsif(rising_edge(pixel_clk)) then
             -- running counter
             if( h_count < h_total -1) then
-                h_count := h_count + 1;
+                h_count <= h_count + 1;
             else
-                h_count := 0;
+                h_count <= 0;
                 -- add a vertical count once one horizontal row is done
                 if(v_count < v_total-1) then
-                    v_count := v_count +1;
+                    v_count <= v_count +1;
                 else
-                    v_count :=0;
+                    v_count <=0;
                 end if;
             end if;
             
@@ -98,7 +96,6 @@ begin
             else
                 hsync <= not hsync_pol;
             end if;
-            
             if(v_count >= v_visible + v_fp and v_count < v_visible + v_fp + v_pulse) then
                 vsync <= vsync_pol;
             else
@@ -107,14 +104,14 @@ begin
             
             -- pixel position
             if(h_count < h_visible) then
-                pixel_x <= h_count;
+                pixel_x <= std_logic_vector(to_unsigned(h_count, pixel_x'length));
             else 
-                pixel_x <= 0;
+                pixel_x <= (others =>'0');
             end if;
             if(v_count < v_visible)then
-                pixel_y <= v_count;
+                pixel_y <= std_logic_vector(to_unsigned(v_count, pixel_y'length));
             else
-                pixel_y <= 0;
+                pixel_y <= (others =>'0');
             end if;
             
             --  Only process pixel_x and pixel_y if in the visible area

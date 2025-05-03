@@ -1,98 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1745311651">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1746294309">
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="Tetris_Top_postroute_physopted.rqs"/>
-  <File Type="ROUTE-RQS" Name="Tetris_Top_routed.rqs"/>
-  <File Type="RBD_FILE" Name="Tetris_Top.rbd"/>
-  <File Type="NPI_FILE" Name="Tetris_Top.npi"/>
-  <File Type="RNPI_FILE" Name="Tetris_Top.rnpi"/>
-  <File Type="CFI_FILE" Name="Tetris_Top.cfi"/>
-  <File Type="RCFI_FILE" Name="Tetris_Top.rcfi"/>
-  <File Type="PL-PDI-FILE" Name="Tetris_Top_pld.pdi"/>
-  <File Type="BOOT-PDI-FILE" Name="Tetris_Top_boot.pdi"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Tetris_Top_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Tetris_Top_postroute_physopt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="Tetris_Top_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="Tetris_Top_postplace_pwropt.dcp"/>
-  <File Type="PWROPT-DCP" Name="Tetris_Top_pwropt.dcp"/>
-  <File Type="PLACE-DCP" Name="Tetris_Top_placed.dcp"/>
-  <File Type="OPT-DCP" Name="Tetris_Top_opt.dcp"/>
-  <File Type="ROUTE-TIMING-PB" Name="Tetris_Top_timing_summary_routed.pb"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="Tetris_Top_routed_bb.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="Tetris_Top_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="Tetris_Top_routed.dcp"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="Tetris_Top_incremental_reuse_pre_placed.rpt"/>
-  <File Type="OPT-HWDEF" Name="Tetris_Top.hwdef"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="VGA_Top_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="VGA_Top_routed.rqs"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-BGN" Name="VGA_Top.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="VGA_Top.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="Tetris_Top.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="Tetris_Top.sysdef"/>
-  <File Type="BITSTR-MMI" Name="Tetris_Top.mmi"/>
-  <File Type="BITSTR-BMM" Name="Tetris_Top_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="Tetris_Top.nky"/>
-  <File Type="BITSTR-RBT" Name="Tetris_Top.rbt"/>
+  <File Type="BITSTR-LTX" Name="VGA_Top.ltx"/>
+  <File Type="RBD_FILE" Name="VGA_Top.rbd"/>
+  <File Type="NPI_FILE" Name="VGA_Top.npi"/>
+  <File Type="RNPI_FILE" Name="VGA_Top.rnpi"/>
+  <File Type="CFI_FILE" Name="VGA_Top.cfi"/>
+  <File Type="RCFI_FILE" Name="VGA_Top.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="VGA_Top_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="VGA_Top_boot.pdi"/>
+  <File Type="RDI-RDI" Name="VGA_Top.vdi"/>
+  <File Type="PDI-FILE" Name="VGA_Top.pdi"/>
+  <File Type="BITSTR-MMI" Name="VGA_Top.mmi"/>
+  <File Type="BITSTR-BMM" Name="VGA_Top_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="VGA_Top.nky"/>
+  <File Type="BITSTR-RBT" Name="VGA_Top.rbt"/>
+  <File Type="BITSTR-MSK" Name="VGA_Top.msk"/>
+  <File Type="BG-BIN" Name="VGA_Top.bin"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
-  <File Type="BG-BIT" Name="Tetris_Top.bit"/>
-  <File Type="PDI-FILE" Name="Tetris_Top.pdi"/>
-  <File Type="RDI-RDI" Name="Tetris_Top.vdi"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="Tetris_Top_timing_summary_routed.rpt"/>
-  <File Type="BG-BIN" Name="Tetris_Top.bin"/>
-  <File Type="PLACE-IO" Name="Tetris_Top_io_placed.rpt"/>
-  <File Type="OPT-DRC" Name="Tetris_Top_drc_opted.rpt"/>
-  <File Type="PLACE-CTRL" Name="Tetris_Top_control_sets_placed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="Tetris_Top_methodology_drc_routed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="Tetris_Top_utilization_placed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="Tetris_Top_timing_summary_routed.rpx"/>
-  <File Type="REPORTS-TCL" Name="Tetris_Top_reports.tcl"/>
-  <File Type="PA-TCL" Name="Tetris_Top.tcl"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Tetris_Top_methodology_drc_routed.pb"/>
-  <File Type="BG-BGN" Name="Tetris_Top.bgn"/>
-  <File Type="PLACE-UTIL" Name="Tetris_Top_utilization_placed.rpt"/>
-  <File Type="ROUTE-STATUS" Name="Tetris_Top_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="Tetris_Top_route_status.pb"/>
-  <File Type="BG-DRC" Name="Tetris_Top.drc"/>
-  <File Type="ROUTE-PWR" Name="Tetris_Top_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="Tetris_Top_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="Tetris_Top_power_summary_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="Tetris_Top_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Tetris_Top_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-RPX" Name="Tetris_Top_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="Tetris_Top_drc_routed.pb"/>
-  <File Type="ROUTE-SIMILARITY" Name="Tetris_Top_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="Tetris_Top_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="Tetris_Top_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="Tetris_Top_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="Tetris_Top_bus_skew_routed.pb"/>
-  <File Type="BITSTR-MSK" Name="Tetris_Top.msk"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Tetris_Top_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Tetris_Top_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Tetris_Top_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Tetris_Top_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="VGA_Top.bit"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Tetris_Top_bus_skew_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Tetris_Top_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Tetris_Top_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Tetris_Top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Tetris_Top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Tetris_Top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="VGA_Top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="VGA_Top_postroute_physopt.dcp"/>
+  <File Type="BG-DRC" Name="VGA_Top.drc"/>
+  <File Type="ROUTE-RQS-PB" Name="VGA_Top_rqs_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="VGA_Top_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="VGA_Top_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="VGA_Top_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="VGA_Top_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="VGA_Top_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="VGA_Top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="VGA_Top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="VGA_Top_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="VGA_Top_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="VGA_Top_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="VGA_Top_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="VGA_Top_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="VGA_Top_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="VGA_Top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="VGA_Top_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="VGA_Top_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="VGA_Top_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="VGA_Top_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="VGA_Top_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="VGA_Top_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="VGA_Top_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="VGA_Top_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="VGA_Top_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="VGA_Top_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="VGA_Top_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="VGA_Top_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="VGA_Top_postplace_pwropt.dcp"/>
+  <File Type="PLACE-RQA-PB" Name="VGA_Top_rqa_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="VGA_Top_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="VGA_Top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="VGA_Top_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="VGA_Top_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="VGA_Top_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="VGA_Top_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="VGA_Top_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="VGA_Top_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="VGA_Top_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="VGA_Top_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="VGA_Top_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="VGA_Top_pwropt.dcp"/>
+  <File Type="OPT-RQA-PB" Name="VGA_Top_rqa_opted.pb"/>
+  <File Type="OPT-HWDEF" Name="VGA_Top.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="VGA_Top_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="VGA_Top_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="VGA_Top_opt.dcp"/>
+  <File Type="OPT-TIMING" Name="VGA_Top_timing_summary_opted.rpt"/>
+  <File Type="REPORTS-TCL" Name="VGA_Top_reports.tcl"/>
+  <File Type="INIT-TIMING" Name="VGA_Top_timing_summary_init.rpt"/>
+  <File Type="PA-TCL" Name="VGA_Top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/Tetris_Top.vhd">
+    <File Path="$PSRCDIR/sources_1/new/gamegrid_pkg.vhd">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/VGA_Test.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/Testbench.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/VGA_Controller.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Video_Renderer.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/vga_test.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Field_RAM.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -106,16 +124,23 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Video_Renderer.vhd">
+    <File Path="$PSRCDIR/sources_1/new/PRNG.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/Tetris_Top.vhd">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Tetris_Top"/>
+      <Option Name="TopModule" Val="VGA_Top"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -127,17 +152,28 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/Tetris.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/Tetris_Top.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -147,6 +183,5 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>
