@@ -1,9 +1,11 @@
-'FPGA-Tetris
+FPGA-Tetris für Modul Digitale Systeme 
+SoSe25- Prof. Dr. Robert Fitz
+HAW Hamburg
 
+
+OUT OF DATE, VISIT DOUGLAS BRANCH FOR LATEST PUSHES
 Tetris
 
-ASK FITZ: 
-- Board, we need 2 Basys3
 
 
 3 Keys:
