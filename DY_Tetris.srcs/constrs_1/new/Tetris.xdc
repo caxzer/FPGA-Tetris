@@ -237,7 +237,6 @@ create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_
 #set_property IOSTANDARD LVCMOS33 [get_ports QspiCSn]
 
 set_property PACKAGE_PIN P19 [get_ports hsync]
-set_property PACKAGE_PIN U18 [get_ports reset_btn]
 set_property PACKAGE_PIN J18 [get_ports {vga_blue[3]}]
 set_property PACKAGE_PIN K18 [get_ports {vga_blue[2]}]
 set_property PACKAGE_PIN L18 [get_ports {vga_blue[1]}]
@@ -263,6 +262,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports {vga_red[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {vga_red[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {vga_red[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports hsync]
-set_property IOSTANDARD LVCMOS33 [get_ports reset_btn]
 set_property IOSTANDARD LVCMOS33 [get_ports vsync]
 set_property PACKAGE_PIN R19 [get_ports vsync]
+
+set_property IOSTANDARD LVCMOS33 [get_ports reset]
+set_property PACKAGE_PIN U18 [get_ports reset]

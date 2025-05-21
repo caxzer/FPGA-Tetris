@@ -33,17 +33,17 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Video_Renderer is
 Port (
-    clk         : in std_logic;
-    reset       : in std_logic;
+--    clk   : in std_logic;
+--    reset : in std_logic;
     field : in std_logic_vector(200 downto 1);  -- game field
-    pixel_x     : in std_logic_vector(9 downto 0);  -- screen pixel coordinates
-    pixel_y     : in std_logic_vector(8 downto 0);  -- -
-    disp_ena    : in std_logic;
+    pixel_x : in std_logic_vector(9 downto 0);  -- screen pixel coordinates
+    pixel_y : in std_logic_vector(8 downto 0);  -- 
+    disp_ena  : in std_logic;
     
     -- output for color
-    red         : out std_logic_vector(3 downto 0);
-    green       : out std_logic_vector(3 downto 0);
-    blue        : out std_logic_vector(3 downto 0)
+    red  : out std_logic_vector(3 downto 0);
+    green: out std_logic_vector(3 downto 0);
+    blue : out std_logic_vector(3 downto 0)
  );
 
 

@@ -57,6 +57,6 @@ process(clk, reset, tick, move_left, move_right, pull_drop)
 begin
 -- if state = SPAWN
 -- choose block from pseudorandom number generator input here
-
+    
 end process;
 end Behavioral;

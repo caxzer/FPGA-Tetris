@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Sat May  3 19:45:45 2025
+| Date         : Sun May 11 12:03:27 2025
 | Host         : cax-ThinkPad-T495s running 64-bit Ubuntu 24.04.2 LTS
 | Command      : report_drc -file VGA_Top_drc_opted.rpt -pb VGA_Top_drc_opted.pb -rpx VGA_Top_drc_opted.rpx
 | Design       : VGA_Top

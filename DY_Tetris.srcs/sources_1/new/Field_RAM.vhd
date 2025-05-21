@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -38,22 +38,22 @@ Port (
     reset       : in std_logic;
     clk_gametick: in std_logic;
     next_step       : in bit_vector (3 downto 0);
-    tetrimino_piece : in bit_vector (2 downto 0);
+    tetrimino_piece : in std_logic_vector (2 downto 0);
     -- gamegrid_pkg is defined from 1-10 and 1-20
     --field       : out field_grid
-    get_field_x : in bit;
-    get_field_y : in bit;
-    set_field_x : out bit;
-    set_field_y: out bit;
+--    get_field_x : in bit;
+--    get_field_y : in bit;
+--    set_field_x : out bit;
+--    set_field_y: out bit;
     
-    field_out: out field_grid;
-    field_in : in field_grid
+    field_out: out std_logic_vector(200 downto 1) ;
+    field_in : in std_logic_vector(200 downto 1)  
  );
 end Field_RAM;
 
 architecture Behavioral of Field_RAM is
--- initialize the grid and set all bits to zero
-signal ram_field : field_grid := (others=> (others => '0'));
+-- initialize a interminent grid and set all bits to zero
+
 
 begin
 process(clk,reset,get_field_x,get_field_y)

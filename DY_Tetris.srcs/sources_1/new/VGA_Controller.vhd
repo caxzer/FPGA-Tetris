@@ -46,7 +46,7 @@ entity VGA_Controller is
     );
     Port (
         pixel_clk   : in  std_logic;  -- 40 MHz clock (not bit because of rising edge)
-        reset_n     : in std_logic;      -- manual reset, logic in top
+        reset       : in std_logic;      -- manual reset, logic in top
         hsync       : out std_logic;
         vsync       : out std_logic;
         pixel_x     : out std_logic_vector (9 downto 0);      --horizontal pixel coordinates (1024 but only 640 needed)
@@ -65,10 +65,10 @@ architecture Behavioral of VGA_Controller is
 
     
 begin
-    process(pixel_clk, reset_n)
+    process(pixel_clk, reset)
     
     begin
-        if(reset_n = '0') then  
+        if(reset = '1') then  --active-high reset
             h_count <= 0;
             v_count <= 0;
             hsync <= not Hsync_pol;
