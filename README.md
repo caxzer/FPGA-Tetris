@@ -1,5 +1,12 @@
 FPGA-Tetris
 
+DY-Projekt
+HAW HAMBURG
+
+
+
+____NOTES___
+
 Controls: 
 - left_button : move left
 - right_button : move right
@@ -61,19 +68,19 @@ Field_RAM : supply game engine with current grid position updates grid on every 
 PRNG : generates a random number between 1 and 7 for the Tetriminos
 Input_Controller : takes input and makes a bit vector for clean input signal
 Scoreboard : 7-Segment-Display controller
-Moduloticker : generates tick every 100ms (for control movements)(use 20 ticks for each fall)
+Tick_counter : generates tick every 100ms (for control movements)(use 20 ticks for each fall)
 
 
 Goals and timeline:
 1. draw FSM and Block Diagramm
 2. make display work
+
+--- Zwischenbericht
 3. draw blocks
 4. blocks fall with each tick
---- Zwischenbericht
-5. blocks move horizontally
-6. blocks rotate
-7. blocks stack
+5. blocks move 
 8. (row)win/lose conditions
+
 --- Finalbericht
 
 References (add here!): 
