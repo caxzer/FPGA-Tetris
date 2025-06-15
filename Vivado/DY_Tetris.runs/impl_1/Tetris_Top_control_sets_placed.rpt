@@ -1,0 +1,126 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sun Jun 15 15:23:50 2025
+| Host         : cax-ThinkPad-T495s running 64-bit Ubuntu 24.04.2 LTS
+| Command      : report_control_sets -verbose -file Tetris_Top_control_sets_placed.rpt
+| Design       : Tetris_Top
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    48 |
+|    Minimum number of control sets                        |    48 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   251 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    48 |
+| >= 0 to < 4        |    25 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    19 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             628 |          444 |
+| No           | No                    | Yes                    |             791 |          333 |
+| No           | Yes                   | No                     |               8 |            8 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            1058 |          435 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------+--------------------------------------------+-----------------------------------------------+------------------+----------------+--------------+
+|                  Clock Signal                  |                Enable Signal               |                Set/Reset Signal               | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------------------+--------------------------------------------+-----------------------------------------------+------------------+----------------+--------------+
+|  clk_gen_inst/inst/clk_out1                    |                                            | pseudorandom/tetrimino_reg_reg[4]_LDC_i_1_n_3 |                1 |              1 |         1.00 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | pseudorandom/tetrimino_reg_reg[0]_LDC_i_1_n_3 |                1 |              1 |         1.00 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | pseudorandom/tetrimino_reg_reg[0]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | pseudorandom/tetrimino_reg_reg[1]_LDC_i_1_n_3 |                1 |              1 |         1.00 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | pseudorandom/tetrimino_reg_reg[1]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | pseudorandom/tetrimino_reg_reg[2]_LDC_i_1_n_3 |                1 |              1 |         1.00 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | pseudorandom/tetrimino_reg_reg[2]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | pseudorandom/tetrimino_reg_reg[3]_LDC_i_1_n_3 |                1 |              1 |         1.00 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | pseudorandom/tetrimino_reg_reg[3]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
+|  pseudorandom/tetrimino_reg_reg[0]_LDC_i_1_n_3 |                                            | pseudorandom/tetrimino_reg_reg[0]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | pseudorandom/tetrimino_reg_reg[4]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | pseudorandom/tetrimino_reg_reg[5]_LDC_i_1_n_3 |                1 |              1 |         1.00 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | pseudorandom/tetrimino_reg_reg[5]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | pseudorandom/tetrimino_reg_reg[6]_LDC_i_1_n_3 |                1 |              1 |         1.00 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | pseudorandom/tetrimino_reg_reg[6]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | pseudorandom/tetrimino_reg_reg[7]_LDC_i_1_n_3 |                1 |              1 |         1.00 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | pseudorandom/tetrimino_reg_reg[7]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
+|  game_logic/flash_on__0                        |                                            |                                               |                1 |              1 |         1.00 |
+|  pseudorandom/tetrimino_reg_reg[1]_LDC_i_1_n_3 |                                            | pseudorandom/tetrimino_reg_reg[1]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
+|  pseudorandom/tetrimino_reg_reg[2]_LDC_i_1_n_3 |                                            | pseudorandom/tetrimino_reg_reg[2]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
+|  pseudorandom/tetrimino_reg_reg[3]_LDC_i_1_n_3 |                                            | pseudorandom/tetrimino_reg_reg[3]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
+|  pseudorandom/tetrimino_reg_reg[7]_LDC_i_1_n_3 |                                            | pseudorandom/tetrimino_reg_reg[7]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
+|  pseudorandom/tetrimino_reg_reg[6]_LDC_i_1_n_3 |                                            | pseudorandom/tetrimino_reg_reg[6]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
+|  pseudorandom/tetrimino_reg_reg[5]_LDC_i_1_n_3 |                                            | pseudorandom/tetrimino_reg_reg[5]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
+|  pseudorandom/tetrimino_reg_reg[4]_LDC_i_1_n_3 |                                            | pseudorandom/tetrimino_reg_reg[4]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
+|  clk_gen_inst/inst/clk_out1                    | game_logic/lock_row_check[4]_i_1_n_3       | game_logic/reset                              |                2 |              5 |         2.50 |
+|  clk_gen_inst/inst/clk_out1                    | tick/count                                 | game_logic/AR[0]                              |                4 |              8 |         2.00 |
+|  vga/E[0]                                      |                                            |                                               |                6 |              9 |         1.50 |
+|  clk_gen_inst/inst/clk_out1                    | vga/sel                                    | game_logic/reset                              |                3 |             10 |         3.33 |
+|  clk_gen_inst/inst/clk_out1                    | input/up_count[0]_i_1_n_3                  | game_logic/reset                              |                5 |             17 |         3.40 |
+|  clk_gen_inst/inst/clk_out1                    | input/right_count[0]_i_1_n_3               | game_logic/reset                              |                5 |             17 |         3.40 |
+|  clk_gen_inst/inst/clk_out1                    | input/left_count[0]_i_1_n_3                | game_logic/reset                              |                5 |             17 |         3.40 |
+|  clk_gen_inst/inst/clk_out1                    | input/down_count[0]_i_1_n_3                | game_logic/reset                              |                5 |             17 |         3.40 |
+|  clk_gen_inst/inst/clk_out1                    | input/centre_count[0]_i_1_n_3              | game_logic/reset                              |                5 |             17 |         3.40 |
+|  clk_gen_inst/inst/clk_out1                    |                                            |                                               |                6 |             18 |         3.00 |
+|  clk100_IBUF                                   |                                            | game_logic/reset                              |                4 |             19 |         4.75 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | game_logic/AR[0]                              |                4 |             21 |         5.25 |
+|  clk_gen_inst/inst/clk_out1                    | game_logic/FSM_sequential_state[3]_i_1_n_3 | game_logic/reset                              |               12 |             28 |         2.33 |
+|  clk_gen_inst/inst/clk_out1                    | game_logic/pivot_y[31]_i_1_n_3             | game_logic/reset                              |                9 |             32 |         3.56 |
+|  clk_gen_inst/inst/clk_out1                    | game_logic/pivot_x[31]_i_1_n_3             | game_logic/reset                              |               13 |             34 |         2.62 |
+|  clk_gen_inst/inst/clk_out1                    | game_logic/E[0]                            | game_logic/reset                              |               62 |            200 |         3.23 |
+|  clk_gen_inst/inst/clk_out1                    | game_logic/update_saved_en_reg_0[0]        | game_logic/reset                              |              109 |            200 |         1.83 |
+|  clk_gen_inst/inst/clk_out1                    | game_logic/update_myblock_en_reg_0[0]      | game_logic/reset                              |              122 |            200 |         1.64 |
+|  n_2_0_BUFG                                    |                                            |                                               |              126 |            200 |         1.59 |
+|  n_1_1857_BUFG                                 |                                            |                                               |              109 |            200 |         1.83 |
+|  n_0_2_BUFG                                    |                                            |                                               |              196 |            200 |         1.02 |
+|  clk_gen_inst/inst/clk_out1                    | game_logic/block_y[1][31]_i_1_n_3          | game_logic/reset                              |               74 |            256 |         3.46 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | game_logic/reset                              |              309 |            735 |         2.38 |
++------------------------------------------------+--------------------------------------------+-----------------------------------------------+------------------+----------------+--------------+
+
+

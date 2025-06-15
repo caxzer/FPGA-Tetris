@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sat Jun 14 13:39:01 2025
+# Process ID         : 2338851
+# Current directory  : /home/cax/DY_Tetris/Vivado/DY_Tetris.runs/impl_1
+# Command line       : vivado -log Tetris_Top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Tetris_Top.tcl -notrace
+# Log file           : /home/cax/DY_Tetris/Vivado/DY_Tetris.runs/impl_1/Tetris_Top.vdi
+# Journal file       : /home/cax/DY_Tetris/Vivado/DY_Tetris.runs/impl_1/vivado.jou
+# Running On         : cax-ThinkPad-T495s
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.2 LTS
+# Processor Detail   : AMD Ryzen 5 PRO 3500U w/ Radeon Vega Mobile Gfx
+# CPU Frequency      : 2440.708 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 14534 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 18829 MB
+# Available Virtual  : 8558 MB
+#-----------------------------------------------------------
+source Tetris_Top.tcl -notrace
