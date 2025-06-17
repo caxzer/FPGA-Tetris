@@ -1,37 +1,7 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 04/26/2025 07:18:46 PM
--- Design Name: Game field RAM
--- Module Name: Field_RAM - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: Provide information for collision check, and saving if lock state is provied
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
--- rename to draw_block!!
 entity Field_RAM is
 Port (
     clk         : in std_logic;

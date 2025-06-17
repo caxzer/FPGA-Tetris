@@ -1,14 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity Input_Controller is
     Port (
@@ -92,7 +84,7 @@ begin
             
             control <= "000";
         elsif rising_edge(clk) then   
-            -- Up
+            -- up
             if up_sync= '1' then    --synchonized
                 if up_count < DEBOUNCE then
                     up_count <= up_count + 1;
@@ -105,8 +97,7 @@ begin
                 up_deb <= '0';
             end if;
               
-            
-            -- Down
+            -- down
             if down_sync = '1' then
                 if down_count < DEBOUNCE then
                     down_count <= down_count + 1;
@@ -119,8 +110,7 @@ begin
                 down_deb <= '0';
             end if;
 
-
-            -- Left
+            -- left
             if left_sync = '1' then 
                 if left_count < DEBOUNCE then
                     left_count <= left_count + 1;
@@ -133,7 +123,7 @@ begin
                 left_deb <= '0';
             end if;
 
-            -- Right
+            -- right
             if right_sync= '1' then
                 if right_count < DEBOUNCE then
                     right_count <= right_count + 1;
@@ -146,7 +136,7 @@ begin
                 right_deb <= '0';
             end if;
 
-            -- Centre
+            -- centre
             if centre_sync = '1' then
                 if centre_count < DEBOUNCE then
                     centre_count <= centre_count + 1;
@@ -158,6 +148,7 @@ begin
                 centre_count <= 0;
                 centre_deb <= '0';
             end if;
+            
             -- output in "Control"-vector
             if left_deb = '1' and (last_left_deb = '0')then
                 control <= "001";

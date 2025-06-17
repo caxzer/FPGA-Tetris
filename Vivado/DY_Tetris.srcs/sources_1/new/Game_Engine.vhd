@@ -1,12 +1,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
 
 entity Game_Engine is
---  Port ( );
     Port(
         clk : in std_logic;
         reset: in std_logic;
@@ -232,15 +228,15 @@ begin
                         -- save block var to signal
                         next_block_x <= new_block_x;
                         next_block_y <= new_block_y;
-                        -- update output field
+                       
+                        -- update fields
                         -- loop based assignment to save LUTs resources
                         for i in 1 to 200 loop
                             update_output(i) <= myblock_next(i) or savedfield(i);
-                        end loop;       
-                        --update_output <= myblock_next or savedfield;  -- we should see something
+                        end loop;
                         next_update_output_en <= '1';
                          
-                        update_myblock <= myblock_next;         -- save into RAM
+                        update_myblock <= myblock_next;
                         next_update_myblock_en <= '1';
                         
                         next_c_reset <= '1';    -- reset counter
@@ -248,9 +244,7 @@ begin
                     end if;
                 end if;
     
-            when MOVE =>    -- only 1 move per game?? check controller; shift over border
-                --update myblocknext
-                --myblock_next := myblock;
+            when MOVE => 
                 temp_pivot_x := 0;
                 temp_pivot_y := 0;
                 no_move := false;
@@ -284,11 +278,12 @@ begin
                         if not collision then 
                             update_myblock <= myblock_next;     --update myblock field
                             next_update_myblock_en <= '1';
+                            
                             for i in 1 to 200 loop
                                 update_output(i) <= myblock_next(i) or savedfield(i);
                             end loop;
-                            --update_output <= myblock_next or savedfield;    -- update output
                             next_update_output_en <= '1';
+                            
                             next_pivot_x <= temp_pivot_x;   -- update pivot
                             next_pivot_y <= temp_pivot_y;    -- y stays the same
                         end if;
@@ -322,10 +317,11 @@ begin
                         if not collision then  --no collision
                             update_myblock <= myblock_next;
                             next_update_myblock_en <= '1';
+                            
                             for i in 1 to 200 loop
                                 update_output(i) <= myblock_next(i) or savedfield(i);
                             end loop;
-                            --update_output <= myblock_next or savedfield;
+                            
                             next_update_output_en <= '1';
                             next_pivot_x <= temp_pivot_x;
                             next_pivot_y <= temp_pivot_y;    -- y stays the same
@@ -366,10 +362,10 @@ begin
                         if not collision then  --no collision
                             update_myblock <= myblock_next;
                             next_update_myblock_en <= '1';
+                            
                             for i in 1 to 200 loop
                                 update_output(i) <= myblock_next(i) or savedfield(i);
                             end loop;
-                            --update_output <= myblock_next or savedfield;
                             next_update_output_en <= '1';
                             
                             --update my block config vector
@@ -399,16 +395,16 @@ begin
                     if not collision then  --no collision
                         update_myblock <= myblock_next;
                         next_update_myblock_en <= '1';
+                        
                         for i in 1 to 200 loop
                             update_output(i) <= myblock_next(i) or savedfield(i);
-                        end loop;
-                        --update_output <= myblock_next or savedfield;
+                        end loop;                        
                         next_update_output_en <= '1';
+                        
                         next_pivot_x <= temp_pivot_x;
                         next_pivot_y <= temp_pivot_y;    -- y stays the same
                     end if;
                     
-                
                 elsif control = "011" then      --hard-drop
                     next_c_reset <= '1';
                     next_state <= HARD_DROP;
@@ -588,7 +584,6 @@ begin
                 
                 -- SCORE + 1
                 score_inc <= 1;
-                
                 
                 -- Prepare for next lock/clear cycle
                 next_row_check <= 20;    -- Restart from bottom

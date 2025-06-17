@@ -1,24 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 05/23/2025 05:44:02 PM
--- Design Name: 
--- Module Name: Tick_Counter - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
@@ -44,7 +23,7 @@ begin
             int_counter <= 0;
             count   <= (others => '0');
         elsif rising_edge(clk) then
-            if int_counter = TICK_MAX - 1 then  --count up output counter_vector every 50ms!!!
+            if int_counter = TICK_MAX - 1 then  --increase output counter_vector every 50ms (scalable)
                 int_counter <= 0;
                 count       <= count + 1;
             else

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Sun Jun 15 15:23:50 2025
+| Date         : Tue Jun 17 18:32:10 2025
 | Host         : cax-ThinkPad-T495s running 64-bit Ubuntu 24.04.2 LTS
 | Command      : report_control_sets -verbose -file Tetris_Top_control_sets_placed.rpt
 | Design       : Tetris_Top
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             628 |          444 |
-| No           | No                    | Yes                    |             791 |          333 |
+| No           | No                    | No                     |             628 |          418 |
+| No           | No                    | Yes                    |             791 |          317 |
 | No           | Yes                   | No                     |               8 |            8 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |            1058 |          435 |
+| Yes          | No                    | Yes                    |            1058 |          443 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -99,8 +99,8 @@ Table of Contents
 |  pseudorandom/tetrimino_reg_reg[5]_LDC_i_1_n_3 |                                            | pseudorandom/tetrimino_reg_reg[5]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
 |  pseudorandom/tetrimino_reg_reg[4]_LDC_i_1_n_3 |                                            | pseudorandom/tetrimino_reg_reg[4]_LDC_i_2_n_3 |                1 |              1 |         1.00 |
 |  clk_gen_inst/inst/clk_out1                    | game_logic/lock_row_check[4]_i_1_n_3       | game_logic/reset                              |                2 |              5 |         2.50 |
-|  clk_gen_inst/inst/clk_out1                    | tick/count                                 | game_logic/AR[0]                              |                4 |              8 |         2.00 |
-|  vga/E[0]                                      |                                            |                                               |                6 |              9 |         1.50 |
+|  clk_gen_inst/inst/clk_out1                    | tick/count                                 | game_logic/AR[0]                              |                3 |              8 |         2.67 |
+|  vga/grid_x__0                                 |                                            |                                               |                8 |              9 |         1.12 |
 |  clk_gen_inst/inst/clk_out1                    | vga/sel                                    | game_logic/reset                              |                3 |             10 |         3.33 |
 |  clk_gen_inst/inst/clk_out1                    | input/up_count[0]_i_1_n_3                  | game_logic/reset                              |                5 |             17 |         3.40 |
 |  clk_gen_inst/inst/clk_out1                    | input/right_count[0]_i_1_n_3               | game_logic/reset                              |                5 |             17 |         3.40 |
@@ -108,19 +108,19 @@ Table of Contents
 |  clk_gen_inst/inst/clk_out1                    | input/down_count[0]_i_1_n_3                | game_logic/reset                              |                5 |             17 |         3.40 |
 |  clk_gen_inst/inst/clk_out1                    | input/centre_count[0]_i_1_n_3              | game_logic/reset                              |                5 |             17 |         3.40 |
 |  clk_gen_inst/inst/clk_out1                    |                                            |                                               |                6 |             18 |         3.00 |
-|  clk100_IBUF                                   |                                            | game_logic/reset                              |                4 |             19 |         4.75 |
-|  clk_gen_inst/inst/clk_out1                    |                                            | game_logic/AR[0]                              |                4 |             21 |         5.25 |
-|  clk_gen_inst/inst/clk_out1                    | game_logic/FSM_sequential_state[3]_i_1_n_3 | game_logic/reset                              |               12 |             28 |         2.33 |
-|  clk_gen_inst/inst/clk_out1                    | game_logic/pivot_y[31]_i_1_n_3             | game_logic/reset                              |                9 |             32 |         3.56 |
-|  clk_gen_inst/inst/clk_out1                    | game_logic/pivot_x[31]_i_1_n_3             | game_logic/reset                              |               13 |             34 |         2.62 |
-|  clk_gen_inst/inst/clk_out1                    | game_logic/E[0]                            | game_logic/reset                              |               62 |            200 |         3.23 |
-|  clk_gen_inst/inst/clk_out1                    | game_logic/update_saved_en_reg_0[0]        | game_logic/reset                              |              109 |            200 |         1.83 |
-|  clk_gen_inst/inst/clk_out1                    | game_logic/update_myblock_en_reg_0[0]      | game_logic/reset                              |              122 |            200 |         1.64 |
-|  n_2_0_BUFG                                    |                                            |                                               |              126 |            200 |         1.59 |
-|  n_1_1857_BUFG                                 |                                            |                                               |              109 |            200 |         1.83 |
-|  n_0_2_BUFG                                    |                                            |                                               |              196 |            200 |         1.02 |
-|  clk_gen_inst/inst/clk_out1                    | game_logic/block_y[1][31]_i_1_n_3          | game_logic/reset                              |               74 |            256 |         3.46 |
-|  clk_gen_inst/inst/clk_out1                    |                                            | game_logic/reset                              |              309 |            735 |         2.38 |
+|  clk100_IBUF                                   |                                            | game_logic/reset                              |                5 |             19 |         3.80 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | game_logic/AR[0]                              |                5 |             21 |         4.20 |
+|  clk_gen_inst/inst/clk_out1                    | game_logic/FSM_sequential_state[3]_i_1_n_3 | game_logic/reset                              |               15 |             28 |         1.87 |
+|  clk_gen_inst/inst/clk_out1                    | game_logic/pivot_y[31]_i_1_n_3             | game_logic/reset                              |                8 |             32 |         4.00 |
+|  clk_gen_inst/inst/clk_out1                    | game_logic/pivot_x[31]_i_1_n_3             | game_logic/reset                              |               16 |             34 |         2.12 |
+|  clk_gen_inst/inst/clk_out1                    | game_logic/E[0]                            | game_logic/reset                              |               76 |            200 |         2.63 |
+|  clk_gen_inst/inst/clk_out1                    | game_logic/update_saved_en_reg_0[0]        | game_logic/reset                              |              112 |            200 |         1.79 |
+|  clk_gen_inst/inst/clk_out1                    | game_logic/update_myblock_en_reg_0[0]      | game_logic/reset                              |              120 |            200 |         1.67 |
+|  n_2_0_BUFG                                    |                                            |                                               |              115 |            200 |         1.74 |
+|  n_1_1857_BUFG                                 |                                            |                                               |               94 |            200 |         2.13 |
+|  n_0_2_BUFG                                    |                                            |                                               |              194 |            200 |         1.03 |
+|  clk_gen_inst/inst/clk_out1                    | game_logic/block_y[1][31]_i_1_n_3          | game_logic/reset                              |               63 |            256 |         4.06 |
+|  clk_gen_inst/inst/clk_out1                    |                                            | game_logic/reset                              |              291 |            735 |         2.53 |
 +------------------------------------------------+--------------------------------------------+-----------------------------------------------+------------------+----------------+--------------+
 
 

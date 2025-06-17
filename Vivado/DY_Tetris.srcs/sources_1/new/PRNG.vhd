@@ -1,23 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 04/28/2025 12:44:52 PM
--- Design Name: Pseudorandom Number Generator
--- Module Name: PRNG - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
@@ -33,13 +13,11 @@ end PRNG;
 
 architecture Behavioral of PRNG is
     signal counter    : unsigned (7 downto 0) := (others => '0');  --8 bit counter
-    signal tetrimino_reg : std_logic_vector (7 downto 0) := X"5A"; -- Nonzero seed
+    signal tetrimino_reg : std_logic_vector (7 downto 0) := X"5A"; -- hex nonzero seed
     --signal random_val: unsigned(2 downto 0);
     signal mapped_result : std_logic_vector (2 downto 0):= "110";
     
 begin
-    --tetrimino_piece <= tetrimino_reg; 
-     
     process(clk)
     begin
         if rising_edge(clk) then
@@ -61,6 +39,6 @@ begin
     mapped_result <= (tetrimino_reg(5) xor tetrimino_reg(2)) &
                  (tetrimino_reg(4) xor tetrimino_reg(1)) &
                  (tetrimino_reg(3) xor tetrimino_reg(0));
-    tetrimino_piece <= mapped_result when mapped_result < 7 else "010"; -- If 7, use 2 (rare)
+    tetrimino_piece <= mapped_result when mapped_result < 7 else "001"; -- If 7 (out of bounds, but rare to happen), use 1  line block
     
 end Behavioral;

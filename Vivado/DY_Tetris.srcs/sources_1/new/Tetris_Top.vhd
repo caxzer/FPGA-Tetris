@@ -3,7 +3,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity Tetris_Top is
---  Port ( );
     Port (
         clk100     : in std_logic;                      --100Mhz Input from BASYS
         re_set   : in std_logic;                        -- active low reset
@@ -111,6 +110,7 @@ architecture Behavioral of Tetris_Top is
             pixel_x : in std_logic_vector(9 downto 0);  -- screen pixel coordinates
             pixel_y : in std_logic_vector(8 downto 0);  -- 
             disp_ena  : in std_logic;
+            score : in std_logic_vector(7 downto 0);
             red  : out std_logic_vector(3 downto 0);
             green: out std_logic_vector(3 downto 0);
             blue : out std_logic_vector(3 downto 0)
@@ -252,6 +252,7 @@ begin
             red => vga_Red,
             green => vga_Green,
             blue => vga_Blue,
+            score => score,
             disp_ena => disp_ena
         );
     input: Input_Controller
