@@ -25,8 +25,9 @@ entity Tetris_Top is
         seg : out std_logic_vector(6 downto 0);
         digit_on : out std_logic_vector(3 downto 0);
         
-        --melody
+        -- tone and melody
         buzzer: out std_logic
+        -- music : out std_logic
     );
         
 end Tetris_Top;
@@ -318,7 +319,7 @@ begin
         
     highscore : Scoreboard
         port map(
-            clk => clk100,
+            clk => clk,
             reset => reset,
             score => score,
             seg => seg,
@@ -334,11 +335,11 @@ begin
             endgame => endgame,
             buzzer => buzzer
         );
---    music : Melody
+--    mm : Melody
 --        port map(
 --            clk => clk,
 --            reset => reset,
---            buzzer => buzzer
+--            buzzer => music
 --        );
 
 end Behavioral;

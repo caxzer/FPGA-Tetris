@@ -80,7 +80,7 @@ begin
         variable temp : integer;
     begin
         temp := 40 - highscore;
-        if highscore > 30 then  -- max out at 500ms per fall
+        if highscore > 30 then  -- max out at 500ms per fall    
             temp := 10;
         end if;
         dynamic_tick <= std_logic_vector(to_unsigned(temp, 8));
@@ -417,10 +417,7 @@ begin
                         next_state <= FALL;
                 end if;
                 
-                
-            -- NEW STATE
-            -- fix using hard drop does not clear first tow, using had drop again until next block lock clears 2 row
-            -- despite 2nd row not full!
+            
             when HARD_DROP => 
                 can_fall := true;
                 -- test next 

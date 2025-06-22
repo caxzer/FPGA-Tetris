@@ -16,7 +16,7 @@ architecture Behavioral of Scoreboard is
     signal digit1, digit2, digit3 : std_logic_vector(3 downto 0);
     signal mux : unsigned (1 downto 0) := (others => '0') ;
     signal mux_cnt : unsigned(16 downto 0) := (others => '0'); --big enough for div 
-    constant MUX_DIV : integer := 100000; -- Adjust for 1ms at 100 MHz
+    constant MUX_DIV : integer := 25170; 
 begin
     -- score to digits
     process(score)

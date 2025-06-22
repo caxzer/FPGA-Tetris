@@ -12,9 +12,9 @@ entity PRNG is
 end PRNG;
 
 architecture Behavioral of PRNG is
-    signal counter    : unsigned (7 downto 0) := (others => '0');  --8 bit counter
-    signal tetrimino_reg : std_logic_vector (7 downto 0) := X"5A"; -- hex nonzero seed
-    --signal random_val: unsigned(2 downto 0);
+    signal counter    : unsigned (7 downto 0) := "11001110";  --8 bit counter
+    signal tetrimino_reg : std_logic_vector (7 downto 0) := "01011000";
+    signal last_valid : std_logic_vector (2 downto 0);
     signal mapped_result : std_logic_vector (2 downto 0):= "110";
     
 begin
@@ -26,19 +26,28 @@ begin
     end process;
     
     process(clk, reset)
+        variable next_tetrimino : std_logic_vector(7 downto 0);
+        variable next_result : std_logic_vector(2 downto 0);
     begin
         if reset = '1' then
             tetrimino_reg <= std_logic_vector(unsigned(tetrimino_reg) xor unsigned(counter(7 downto 0)));  -- seed from counter
+            last_valid <= "001";
         elsif rising_edge(clk) then
             -- 8,6,5,4 taps for maximal period
-            tetrimino_reg <= tetrimino_reg(6 downto 0) & (tetrimino_reg(7) xor tetrimino_reg(5) xor tetrimino_reg(4) xor tetrimino_reg(3));
-        end if;
+            next_tetrimino := tetrimino_reg(6 downto 0) & (tetrimino_reg(7) xor tetrimino_reg(3) xor tetrimino_reg(2) xor tetrimino_reg(0));
+            tetrimino_reg <= next_tetrimino;
+            
+            next_result := (next_tetrimino(5) xor next_tetrimino(2)) &
+                 (next_tetrimino(4) xor next_tetrimino(1)) &
+                 (next_tetrimino(3) xor next_tetrimino(0));
+            mapped_result <= next_result;
+            -- accept only 0-6         
+            if unsigned(next_result) < 7 then
+                last_valid <= next_result;
+            end if;
+        end if;        
     end process;
     
-    -- 7 available blocks but 8 possible numbers...
-    mapped_result <= (tetrimino_reg(5) xor tetrimino_reg(2)) &
-                 (tetrimino_reg(4) xor tetrimino_reg(1)) &
-                 (tetrimino_reg(3) xor tetrimino_reg(0));
-    tetrimino_piece <= mapped_result when mapped_result < 7 else "001"; -- If 7 (out of bounds, but rare to happen), use 1  line block
+    tetrimino_piece <= mapped_result when unsigned(mapped_result) < 7 else last_valid; -- If 7 (out of bounds, but rare to happen), use 1  line block
     
 end Behavioral;

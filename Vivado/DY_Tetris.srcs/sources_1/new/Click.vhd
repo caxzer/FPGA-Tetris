@@ -28,7 +28,7 @@ architecture Behavioral of Click is
 
     signal duration_counter : integer := 0;
     signal tone_counter : integer := 0;
-    signal tone_period : integer := 0;
+    signal tone_period  : integer := 0;
     signal tone : std_logic := '0';
     
     signal cleared_pending , endgame_pending : std_logic := '0';
