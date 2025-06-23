@@ -38,15 +38,12 @@ architecture Behavioral of Tetris_Top is
     signal clk_locked  : std_logic; -- only run game is clk_locked is high
     signal reset, c_reset : std_logic;
     
-    -- Signals for Game speed ticks
-    signal clk_gametick : std_logic;
-    
     -- Signals for VGA 
     signal pixel_x: std_logic_vector(9 downto 0);
     signal pixel_y: std_logic_vector(8 downto 0);
     signal disp_ena: std_logic;
     
-    --Signals for controls
+    --Signals for button controls
     signal control : std_logic_vector (2 downto 0);
     
     -- Signals for tick/counter
@@ -84,17 +81,9 @@ architecture Behavioral of Tetris_Top is
         );
     end component;
     
---    component Clock
---        Port(
---            clk100 : in std_logic;
---            reset: in std_logic;
---            clk:out std_logic
---        );
---    end component;
-    
     component VGA_Controller
         Port(
-            pixel_clk   : in  std_logic;  -- 40 MHz clock (not bit because of rising edge)
+            pixel_clk   : in  std_logic;  -- 25 MHz clock
             reset       : in std_logic;      -- manual reset, logic in top
             hsync       : out std_logic;
             vsync       : out std_logic;
@@ -226,12 +215,6 @@ begin
             clk_out1 => clk,        --out
             locked   => clk_locked  --out
         );
---    clocking: Clock
---        port map(
---            clk100 => clk100,
---            reset => reset,
---            clk => clk
---        );
 
     
     vga: VGA_Controller

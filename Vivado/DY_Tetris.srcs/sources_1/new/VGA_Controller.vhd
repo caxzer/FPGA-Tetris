@@ -18,7 +18,7 @@ entity VGA_Controller is
         vsync_pol   : std_logic := '0'  -- negative polarity
     );
     Port (
-        pixel_clk   : in  std_logic;  -- 40 MHz clock (not bit because of rising edge)
+        pixel_clk   : in  std_logic;  -- 25 MHz clock 
         reset       : in std_logic;      
         hsync       : out std_logic;
         vsync       : out std_logic;

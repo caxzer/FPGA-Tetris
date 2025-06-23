@@ -133,10 +133,10 @@ begin
         
                         is_border := (pxcell_x = 0) or (pxcell_y = 0) or (pxcell_x = cell_size - 1) or (pxcell_y = cell_size - 1);
         
-                        if is_border then   -- border of individual block color (super light grey)
-                            r := "0011";
-                            g := "0011";
-                            b := "0011";
+                        if is_border then   -- border of individual block color 
+                            r := "0000";
+                            g := "0000";
+                            b := "0000";
                         else  -- block color here : WHITE
                             r := "1111";
                             g := "1111";
@@ -151,7 +151,7 @@ begin
             end if;
         end if;
         
-        -- fiannly assign to RGB 
+        -- finally assign to RGB 
         red   <= r;
         green <= g;
         blue  <= b;
