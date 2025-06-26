@@ -1,36 +1,9 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 04/20/2025 01:29:58 PM
--- Design Name: 
--- Module Name: VGA_Controller - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity VGA_Controller is
---  Port ( );
-    generic (
+    generic (   -- standard values
         -- VGA 640x480 @60Hz timing
         h_visible   : integer := 640;   -- visible pixels
         h_fp        : integer := 16;    -- front porch
@@ -45,12 +18,12 @@ entity VGA_Controller is
         vsync_pol   : std_logic := '0'  -- negative polarity
     );
     Port (
-        pixel_clk   : in  std_logic;  -- 40 MHz clock (not bit because of rising edge)
-        reset       : in std_logic;      -- manual reset, logic in top
+        pixel_clk   : in  std_logic;  -- 25 MHz clock 
+        reset       : in std_logic;      
         hsync       : out std_logic;
         vsync       : out std_logic;
-        pixel_x     : out std_logic_vector (9 downto 0);      --horizontal pixel coordinates (1024 but only 640 needed)
-        pixel_y     : out std_logic_vector (8 downto 0);      --vertical pixel coordinate (512 but only 480 needed)
+        pixel_x     : out std_logic_vector (9 downto 0);      --horizontal pixel coordinates (max 1024 but only 640 needed)
+        pixel_y     : out std_logic_vector (8 downto 0);      --vertical pixel coordinate (max 512 but only 480 needed)
         disp_ena    : out std_logic
         );
 end VGA_Controller;
@@ -90,7 +63,7 @@ begin
                 end if;
             end if;
             
-            --generating synchronization signal pulses (refer to BASYS3 timing diagram)
+            -- generating synchronization signal pulses (refer to BASYS3 timing diagram)
             if(h_count >= h_visible + h_fp and h_count < h_visible + h_fp + h_pulse) then
                 hsync <= hsync_pol;
             else
@@ -114,7 +87,7 @@ begin
                 pixel_y <= (others =>'0');
             end if;
             
-            --  Only process pixel_x and pixel_y if in the visible area
+            --  only process pixel_x and pixel_y if in the visible area
             if(h_count < h_visible and v_count < v_visible) then
                 disp_ena <= '1';
             else 

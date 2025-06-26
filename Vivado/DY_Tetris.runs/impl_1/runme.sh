@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/cax/DY_Tetris/DY_Tetris.runs/impl_1'
+HD_PWD='/home/cax/DY_Tetris/Vivado/DY_Tetris.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -39,6 +39,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log VGA_Top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source VGA_Top.tcl -notrace
+EAStep vivado -log Tetris_Top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Tetris_Top.tcl -notrace
 
 

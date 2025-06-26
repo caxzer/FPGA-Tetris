@@ -1,0 +1,16 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../DY_Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl" \
+"../../../../DY_Tetris.srcs/sources_1/new/Field_RAM.vhd" \
+"../../../../DY_Tetris.srcs/sources_1/new/Game_Engine.vhd" \
+"../../../../DY_Tetris.srcs/sources_1/new/Input_Controller.vhd" \
+"../../../../DY_Tetris.srcs/sources_1/new/PRNG.vhd" \
+"../../../../DY_Tetris.srcs/sources_1/new/Scoreboard.vhd" \
+"../../../../DY_Tetris.srcs/sources_1/new/Tetris_Top.vhd" \
+"../../../../DY_Tetris.srcs/sources_1/new/Tick_Counter.vhd" \
+"../../../../DY_Tetris.srcs/sources_1/new/VGA_Controller.vhd" \
+"../../../../DY_Tetris.srcs/sources_1/new/Video_Renderer.vhd" \
+"../../../../DY_Tetris.srcs/sim_1/new/Tetris_1.vhd" \
+
+# Do not sort compile order
+nosort

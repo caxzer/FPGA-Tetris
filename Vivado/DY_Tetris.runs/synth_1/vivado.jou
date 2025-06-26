@@ -3,22 +3,22 @@
 # SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Sun May 11 12:01:35 2025
-# Process ID         : 31442
-# Current directory  : /home/cax/DY_Tetris/DY_Tetris.runs/synth_1
-# Command line       : vivado -log VGA_Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGA_Top.tcl
-# Log file           : /home/cax/DY_Tetris/DY_Tetris.runs/synth_1/VGA_Top.vds
-# Journal file       : /home/cax/DY_Tetris/DY_Tetris.runs/synth_1/vivado.jou
+# Start of session at: Mon Jun 23 16:59:28 2025
+# Process ID         : 76944
+# Current directory  : /home/cax/DY_Tetris/Vivado/DY_Tetris.runs/synth_1
+# Command line       : vivado -log Tetris_Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Tetris_Top.tcl
+# Log file           : /home/cax/DY_Tetris/Vivado/DY_Tetris.runs/synth_1/Tetris_Top.vds
+# Journal file       : /home/cax/DY_Tetris/Vivado/DY_Tetris.runs/synth_1/vivado.jou
 # Running On         : cax-ThinkPad-T495s
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.2 LTS
 # Processor Detail   : AMD Ryzen 5 PRO 3500U w/ Radeon Vega Mobile Gfx
-# CPU Frequency      : 2395.290 MHz
+# CPU Frequency      : 1197.597 MHz
 # CPU Physical cores : 4
 # CPU Logical cores  : 8
 # Host memory        : 14534 MB
 # Swap memory        : 4294 MB
 # Total Virtual      : 18829 MB
-# Available Virtual  : 12521 MB
+# Available Virtual  : 13478 MB
 #-----------------------------------------------------------
-source VGA_Top.tcl -notrace
+source Tetris_Top.tcl -notrace

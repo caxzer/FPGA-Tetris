@@ -79,7 +79,18 @@ Goals and timeline:
 3. draw blocks
 4. blocks fall with each tick
 5. blocks move 
-8. (row)win/lose conditions
+6. clear/lose conditions
+7. scoreboard
+8. faster falling with each score
+
+-- Finishing touches
+9. Pseudorandom improvement
+
+10. color? (optional)
+
+-- 2 Days before presentation (no more code changes here, only improvements)
+11. rework FSM and Block Diagram
+12. Prep Presentation
 
 --- Finalbericht
 

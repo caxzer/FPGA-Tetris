@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/cax/DY_Tetris/DY_Tetris.runs/synth_1'
+HD_PWD='/home/cax/DY_Tetris/Vivado/DY_Tetris.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log VGA_Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGA_Top.tcl
+EAStep vivado -log Tetris_Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Tetris_Top.tcl

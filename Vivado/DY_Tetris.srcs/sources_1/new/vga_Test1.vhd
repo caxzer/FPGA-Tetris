@@ -4,8 +4,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity VGA_Top is
     Port (
-        clk        : in  std_logic;          -- 100 MHz onboard clock (Basys3)
-        reset  : in  std_logic;          -- active-high button
+        clk100        : in  std_logic;          -- 100 MHz onboard clock (Basys3)
+        re_set  : in  std_logic;          -- active-high button
         hsync      : out std_logic;
         vsync      : out std_logic;
         vga_red    : out std_logic_vector(3 downto 0);
@@ -15,7 +15,7 @@ entity VGA_Top is
 end VGA_Top;
 
 architecture Behavioral of VGA_Top is
-
+    signal reset : std_logic:= '0';
     -- Clock divider: divide 100MHz to 25MHz
     signal clk25        : std_logic := '0';
     --signal clk_div      : std_logic_vector(1 downto 0) := (others => '0');
@@ -26,7 +26,9 @@ architecture Behavioral of VGA_Top is
     signal disp_ena     : std_logic;
     --signal reset_n      : std_logic;
     
-    signal field : std_logic_vector(200 downto 1) := (others => '1');    
+    --signal field : std_logic_vector(200 downto 1) := (others => '1');    
+    signal field : std_logic_vector(200 downto 1) := (200 downto 48 => '0') &  "1111" & (43 downto 1 => '0'); 
+    
     
     component clk_wiz_0
         Port (
@@ -64,11 +66,12 @@ architecture Behavioral of VGA_Top is
     end component;
     
 begin
+    reset <= not re_set;
 
     -- Generate 25MHz pixel clock from 100MHz input
     clk_inst : clk_wiz_0
         port map (
-            clk_in1  => clk,
+            clk_in1  => clk100,
             reset    => reset,
            clk_out1 => clk25
 --            locked   => clk_locked
@@ -90,8 +93,6 @@ begin
         
     v_renderer_inst : entity work.Video_Renderer
         port map(
-            clk         => clk25,
-            reset       => reset,
             field       => field,
             pixel_x     => pixel_x,
             pixel_y     => pixel_y,
