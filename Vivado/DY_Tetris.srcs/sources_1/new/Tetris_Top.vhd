@@ -6,7 +6,7 @@ entity Tetris_Top is
     Port (
         clk100     : in std_logic;                      --100Mhz Input from BASYS
         re_set   : in std_logic;                        -- active low reset
-        
+         
         --controls
         btnC : in std_logic;
         btnU : in std_logic;
